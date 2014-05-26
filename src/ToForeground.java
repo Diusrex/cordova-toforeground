@@ -16,10 +16,20 @@ public class ToForeground extends CordovaPlugin {
 
     public static String TAG = "ToForeground";
 
+    /**
+     * action should be the name of the main class. It can be usully found in
+     * 
+     */ 
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 
         PluginResult.Status status = PluginResult.Status.Ok;
         
+        Intent it = new Intent("android.intent.action.MAIN");
+        it.setComponent(new ComponentName(cordova.getContext().getPackageName(), action));
+        it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        // Is getApplicationContext necessary?
+        cordova.getContext().getApplicationContext().startActivity(it);
         return true;
 
 };
