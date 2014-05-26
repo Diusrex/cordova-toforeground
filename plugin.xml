@@ -1,21 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="android.toforeground" version="0.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>android.toforeground</name>
+<plugin id="com.toforeground" version="0.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>com.toforeground</name>
     <description>Allows the app to bring itself to the foreground when it was running in the background</description>
+    <author>Morgan Redshaw</author>
     <license>Will be determined later</license>
     <repo>https://github.com/Diusrex/android.toforeground.git</repo>
-    <js-module name="android.toforeground" src="www/ToForeground.js">
+    <js-module name="ToForeground" src="www/ToForeground.js">
         <clobbers target="cordova.plugins.android.toforeground" />
     </js-module>
 
-
+    <!-- android -->
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
             <feature name="ToForeground">
-                 <param name="android-package" value="android.toforeground.ToForregound" />
+                 <param name="android-package" value="com.toforeground.ToForeground" />
             </feature>
         </config-file>
 
-        <soure-file src="src/ToForeground.java" target-dir="src/android/toforeground" />
+        <soure-file src="src/ToForeground.java" target-dir="src/com/toforeground" />
     </platform>
 </plugin>

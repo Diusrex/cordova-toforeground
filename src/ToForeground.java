@@ -1,4 +1,4 @@
-package android.toforeground;
+package com.toforeground;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -24,12 +24,13 @@ public class ToForeground extends CordovaPlugin {
 
         PluginResult.Status status = PluginResult.Status.Ok;
         
-        Intent it = new Intent("android.intent.action.MAIN");
-        it.setComponent(new ComponentName(cordova.getContext().getPackageName(), action));
-        it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //Intent it = new Intent("android.intent.action.MAIN");
+        //it.setComponent(new ComponentName(cordova.getContext().getPackageName(), action));
+        //it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
         // Is getApplicationContext necessary?
-        cordova.getContext().getApplicationContext().startActivity(it);
+        //cordova.getContext().getApplicationContext().startActivity(it);
+        callbackContext.sendPluginResult(new PluginResult(status, true));
         return true;
 
 };
