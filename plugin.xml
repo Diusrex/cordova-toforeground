@@ -4,7 +4,7 @@
     <description>Allows the app to bring itself to the foreground when it was running in the background</description>
     <license>Will be determined later</license>
     <repo>https://github.com/Diusrex/android.toforeground.git</repo>
-    <js-module name="android.toforeground" src="www/android.ToForeground.js">
+    <js-module name="android.toforeground" src="www/ToForeground.js">
         <clobbers target="cordova.plugins.android.toforeground" />
     </js-module>
 
