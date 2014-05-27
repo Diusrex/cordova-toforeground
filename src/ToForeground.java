@@ -32,5 +32,5 @@ public class ToForeground extends CordovaPlugin {
         //cordova.getContext().getApplicationContext().startActivity(it);
         callbackContext.sendPluginResult(new PluginResult(status, true));
         return true;
-
+    }
 };
