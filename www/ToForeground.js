@@ -1,7 +1,7 @@
 var exec = require('cordova/exec');
 
-ToForeground = function(mainClassName, success, error) {
-    exec(success, error, "ToForeground", mainClassName, []);
+toForeground = function(mainClassName, packageName, successFunction, errorFunction) {
+    exec(successFunction, errorFunction, "ToForeground", mainClassName, [packageName]);
 };
 
-module.exports = ToForeground;
+module.exports = toForeground;
