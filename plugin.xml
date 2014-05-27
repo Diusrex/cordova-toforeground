@@ -6,7 +6,7 @@
     <license>Will be determined later</license>
     <repo>https://github.com/Diusrex/com.toforeground.git</repo>
     <js-module name="ToForeground" src="www/ToForeground.js">
-        <clobbers target="cordova.plugins.android.toforeground" />
+        <clobbers target="ToForeground" />
     </js-module>
 
     <!-- android -->
