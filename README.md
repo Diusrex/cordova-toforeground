@@ -11,15 +11,6 @@ cordova plugin add https://github.com/Diusrex/cordova-toforeground
 ```
 
 
-Then, put the following code in your AndroidManifest file, within the main activity tag (if it is not there already).
-
-```xml
-<intent-filter>
-    <action android:name="android.intent.action.MAIN" />
-    <category android:name="android.intent.category.LAUNCHER" />
-</intent-filter>
-```
-
 Usage
 -----------------------------------------------------
 To use inside of your javascript code, use the following line:
