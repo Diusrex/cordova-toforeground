@@ -21,7 +21,7 @@ To use inside of your javascript code, use the following line:
 toForeground(mainClassName, packageName, successFunction, errorFunction);
 ```
 
-<b>mainClassName</b>: Should be the main activity class for the android code. Will usually be the java class that extends CordovaActivity. If you do not know the name of the main activity for the given package name, just enter the name in as "".
+<b>mainClassName</b>: Should be the main activity class for the android code. For your cordova app, it should be the java class that extends CordovaActivity.
 NOTE: This should only be the name of class, should not contain the package names as well.
 
 <b>packageName</b>: Should be the name of the package that contains the mainClassName.

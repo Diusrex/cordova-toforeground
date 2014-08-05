@@ -41,12 +41,9 @@ public class ToForeground extends CordovaPlugin {
           String packageName = args.getString(0);
 
           Activity activity = this.cordova.getActivity();
-          if (className.equals("")) {
-            it = getPackageManager().getLaunchIntentForPackage(packageName);
-          } else {
-            it.setComponent(new ComponentName(packageName, packageName + "." + className));
-	    it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-          }
+          it.setComponent(new ComponentName(packageName, packageName + "." + className));
+	  it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+          
           Context context = activity.getApplicationContext();
           context.startActivity(it);
         }
