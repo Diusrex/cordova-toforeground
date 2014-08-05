@@ -35,15 +35,19 @@ import android.net.Uri;
 public class ToForeground extends CordovaPlugin {
 
     public boolean execute(String className, JSONArray args, CallbackContext callbackContext) throws JSONException {
+        try {
+          Intent it = new Intent("android.intent.action.MAIN");
 
-        Intent it = new Intent("android.intent.action.MAIN");
+          String packageName = args.getString(0);
+          it.setComponent(new ComponentName(packageName, packageName + "." + className));
+	  it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        String packageName = args.getString(0);
-        it.setComponent(new ComponentName(packageName, packageName + "." + className));
-	it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-        Context context = this.cordova.getActivity().getApplicationContext();
-        context.startActivity(it);
+          Context context = this.cordova.getActivity().getApplicationContext();
+          context.startActivity(it);
+        }
+        catch (Exception e) {
+          return false;
+        }
         return true;
     }
 };
