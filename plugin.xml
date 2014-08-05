@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="com.diusrex.toforeground" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>com.diusrex.toforeground</name>
+    <name>To Forground</name>
     <description>Allows the app to bring itself to the foreground when it was running in the background</description>
     <author>Morgan Redshaw</author>
     <license>Apache 2.0</license>
