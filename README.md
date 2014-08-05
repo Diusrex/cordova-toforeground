@@ -1,5 +1,7 @@
-Cordova plugin for Android to bring app to foreground
+Cordova plugin for Android to bring an app to foreground
 ===================================================
+
+This plugin can only start other activites. As far as I know, this does not include other cordova plugins.
 
 
 Installation
@@ -19,7 +21,8 @@ To use inside of your javascript code, use the following line:
 toForeground(mainClassName, packageName, successFunction, errorFunction);
 ```
 
-<b>mainClassName</b>: Should be the main java class for the android code. Will usually be the java class that extends CordovaActivity. NOTE: This should only be the name of class, should not have the package names as well.
+<b>mainClassName</b>: Should be the main activity class for the android code. Will usually be the java class that extends CordovaActivity. If you do not know the name of the main activity for the given package name, just enter the name in as "".
+NOTE: This should only be the name of class, should not contain the package names as well.
 
 <b>packageName</b>: Should be the name of the package that contains the mainClassName.
 
